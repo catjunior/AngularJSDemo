@@ -1,0 +1,29 @@
+<ion-view view-title="Account">
+  <ion-content>
+
+    <div ng-if="isLogin == true" class="padding">
+      <h2>Hello {{user.name}}</h2>
+      <p style="margin-top:0px;color:#000000;">ID: {{user.id}}</p>
+      <p style="margin-top:0px;color:#000000;">Position: {{user.position}}</p>
+      <button ng-if="isLogin == true" class="button button-positive  button-block" ng-click="logout()">Log out</button>
+    </div>
+
+    <div class="padding" ng-if="isLogin == false">
+      <label class="item item-input">
+                <span class="input-label">Email</span>
+                <input type="text" ng-model="userInfo.email">
+      </label>
+      <label class="item item-input">
+                <span class="input-label">Password</span>
+                <input type="password" ng-model="userInfo.password">
+      </label>
+    </div>
+
+    <div class="padding" ng-if="isLogin == false">
+      <button class="button button-block button-positive" ng-click="login(userInfo)">
+           Login
+      </button>
+    </div>
+
+  </ion-content>
+</ion-view>

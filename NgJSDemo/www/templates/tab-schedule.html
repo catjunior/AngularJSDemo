@@ -1,0 +1,14 @@
+<ion-view view-title="Schedule"  cache-view="false">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="obj in result" type="item-text-wrap">
+        <h2>{{obj.event}}</h2>
+        <p>{{obj.date}}</p>
+
+        <ion-option-button class="button-assertive" ng-click="detail(obj)">
+          detail
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
